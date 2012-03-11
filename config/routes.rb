@@ -1,5 +1,21 @@
 WcsMentoringProject::Application.routes.draw do
+#  get "users/create"
+
+#  get "users/edit"
+
+#  get "users/update"
+
+#  get "user_session/new"
+
   get "home/index"
+
+
+  resource :user_sessions
+  resources :users
+
+  match 'register' => 'users#new'
+  match 'login' => 'user_sessions#new'
+  match 'logout' => 'user_sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
