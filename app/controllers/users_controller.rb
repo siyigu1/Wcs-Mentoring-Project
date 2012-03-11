@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   before_filter :require_no_user, :only => [:new, :create]
-  before_filter :require_user, :only => [:show, :edit, :update]
+  before_filter :require_user, :only => [:show, :edit, :update, :index]
 
   def index
-    redirect_to user_path
+	redirect_to user_path(current_user)
   end
   
   def new
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     # the User has not yet been activated
     if @user.save
       flash[:notice] = "Your account has been created."
-      redirect_to :root
+      redirect_to user_path(current_user)
     else
       flash[:notice] = "There was a problem creating you."
       render :action => :new
