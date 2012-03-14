@@ -5,3 +5,28 @@
  *= require_self
  *= require_tree . 
 */
+body{
+	background-color: #9EC618;
+
+}
+#content_wrapper {
+	position: absolute;
+	top: 0px;
+	width: 800px;
+    	left: 50%;
+    	margin-left: -400px;
+}
+#body{
+	margin-top:-21px;
+	background-color: #86AE00;
+}
+.web_title_inverse {
+	padding-left:10px;
+	padding-right:10px;
+	color: white;
+	background-color: #86AE00;
+}
+.clr
+{
+	clear: both;
+}
