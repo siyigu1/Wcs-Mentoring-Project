@@ -16,6 +16,9 @@ WcsMentoringProject::Application.routes.draw do
   match 'register' => 'users#new'
   match 'login' => 'user_sessions#new'
   match 'logout' => 'user_sessions#destroy'
+  match 'about' => 'home#about'
+  match 'contact' => 'home#contact'
+  match 'mainsite' => 'home#mainsite'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
