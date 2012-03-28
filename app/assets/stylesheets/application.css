@@ -32,12 +32,18 @@ body{
     text-align:center;
     color:white;
     background-color: #86AE00;
+    font-size:small;
+}
+#header{
+    height:13px;
+    font-size:small;
 }
 #main_menu{
     text-align: right;
     color:white;
     background-color: #86AE00;
     height: 70px;
+    font-size:large;
 }
 a.menu_button{
  text-decoration:none
