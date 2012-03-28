@@ -1,5 +1,19 @@
+<style type = "text/css">
+  #logo {
+      height: 70%;
+      width: 70%;
+      opacity:0.8;
+      filter:alpha(opacity=80); /* For IE8 and earlier */
+  }
+  #logo:hover{
+      opacity: 1.0;
+      filter:alpha(opacity=100); /* For IE8 and earlier */
+  }
+</style>
+
 <h1>Home#index</h1>
 
 <p>Hello there, Find me in app/views/home/index.html.erb</p>
 
-<%= image_tag("place_holder.jpg", :alt => "place_holder image") %>
+<%= image_tag("place_holder.jpg", :alt => "place_holder image", :id => "logo") %>
+
