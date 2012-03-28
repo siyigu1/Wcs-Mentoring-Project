@@ -1,5 +1,5 @@
 <div class="web_title" style="float:left">WCS</div>
-<div class="web_title_inverse" style="float:left">MENTORING</div>
+<div class="web_title_inverse" style="float:left;margin-left:10px">MENTORING</div>
 <div style="float:right">
     <% if current_user %>
         <%= link_to 'logout', logout_path %>
@@ -8,4 +8,7 @@
 	<%= link_to 'register', register_path %>
      <% end %>
 </div>
+<% if controller.controller_name != "home" %>
+	<div class="web_title_inverse" style="float:right;margin-right:100px"><%= controller.controller_name.upcase =%></div>
+<% end %>
 <div class="clr"></div>

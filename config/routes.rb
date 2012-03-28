@@ -1,4 +1,6 @@
 WcsMentoringProject::Application.routes.draw do
+  get "messages/show"
+
 #  get "users/create"
 
 #  get "users/edit"
@@ -12,6 +14,13 @@ WcsMentoringProject::Application.routes.draw do
 
   resource :user_sessions
   resources :users
+  resource :messages do
+ 	 get 'inbox'
+	 get 'sent'
+	 get 'draft'
+	 get 'settings'
+  end
+
 
   match 'register' => 'users#new'
   match 'login' => 'user_sessions#new'
@@ -19,7 +28,7 @@ WcsMentoringProject::Application.routes.draw do
   match 'about' => 'home#about'
   match 'contact' => 'home#contact'
   match 'mainsite' => 'home#mainsite'
-  match 'messagebox' => 'message#new'
+  match 'messagebox' => 'messages#show'
   match 'intro' => 'home#intro'
   match 'eventmain'=>'event#main'
 
