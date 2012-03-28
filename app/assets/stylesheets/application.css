@@ -37,7 +37,10 @@ body{
     text-align: right;
     color:white;
     background-color: #86AE00;
-    height: 150px;
+    height: 70px;
+}
+a.menu_button{
+ text-decoration:none
 }
 .web_title_inverse {
 	padding-left:10px;
