@@ -19,6 +19,8 @@ WcsMentoringProject::Application.routes.draw do
   match 'about' => 'home#about'
   match 'contact' => 'home#contact'
   match 'mainsite' => 'home#mainsite'
+  match 'messagebox' => 'message#new'
+  match 'intro' => 'home#intro'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
