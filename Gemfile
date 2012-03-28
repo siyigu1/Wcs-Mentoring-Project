@@ -5,8 +5,17 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
+
+
 #gem 'sqlite3'
-gem 'pg'
+#gem 'pg'
 
 gem "authlogic"
 gem "rails3-generators"
