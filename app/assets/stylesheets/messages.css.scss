@@ -6,3 +6,30 @@
     background-color: #86AE00;
     height: 45px;
 }
+
+#input_box{
+    background-color: white;
+    width:800px;
+    min-height:300px;
+}
+
+.input_button{
+    text-align:right;
+    color:white;
+    background-color:  #9EC618;
+    width: 150px;
+    height: 90px
+}
+.input_word{
+    padding-top:50px;
+    padding-right:20px;
+}
+.property_word{
+    padding-right:100px;
+    color:#9EC618;
+    font-size:x-large;
+}
+textarea{
+    border: none;
+    resize: none;
+}
