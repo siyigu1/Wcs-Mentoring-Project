@@ -5,10 +5,10 @@
  *= require_self
  *= require_tree . 
 */
-a:link {color:white;}      /* unvisited link */
-a:visited {color:white;}  /* visited link */
-a:hover {color:white;}  /* mouse over link */
-a:active {color:white;}  /* selected link */
+a:link {color:white;text-decoration:none}      /* unvisited link */
+a:visited {color:white;text-decoration:none}  /* visited link */
+a:hover {color:white;text-decoration:none}  /* mouse over link */
+a:active {color:white;text-decoration:none}  /* selected link */
 
 body{
 	background-color: #9EC618;

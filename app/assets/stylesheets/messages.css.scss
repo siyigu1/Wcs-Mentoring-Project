@@ -6,13 +6,16 @@
     background-color: #86AE00;
     height: 45px;
 }
-
+//the total input box
 #input_box{
     background-color: white;
     width:800px;
-    min-height:300px;
+    height:300px;
 }
-
+#property_button{
+    position:relative;
+}
+//the big button on the right, including the background
 .input_button{
     text-align:right;
     color:white;
@@ -20,16 +23,44 @@
     width: 150px;
     height: 90px
 }
+//the word on the button on the right
 .input_word{
     padding-top:50px;
     padding-right:20px;
 }
+//the small button when hover the mouse on property button
+.small_input_button{
+    background-color: #9EC618;
+    min-width:70px !important;
+    padding-right:10px;
+    bottom:5px;
+    margin-bottom:2px;
+}
+.whitecolor{
+    color:white;
+}
+//the textarea
+.input_box{
+    padding-top:20px;
+    padding-left:20px;
+    width:600px;
+    height:245px;
+}
+//the property button group, includes the popup menu of property change
+.property_button{
+    position:absolute;
+    bottom:0px;
+}
+//the property button on the botton
 .property_word{
-    padding-right:100px;
     color:#9EC618;
-    font-size:x-large;
+    font-size:large;
 }
 textarea{
     border: none;
     resize: none;
 }
+a.property_word:link {color:#9EC618;}      /* unvisited link */
+a.property_word:visited {color:#9EC618;}  /* visited link */
+a.property_word:hover {color:#9EC618;}  /* mouse over link */
+a.property_word:active {color:#9EC618;} 

@@ -4,7 +4,45 @@
 <div class = "input_button" style = "margin-top:15px;margin-bottom:15px"><div class="input_word">Save</div></div>
 <div class = "input_button"><div class="input_word">Discard</div></div>
 </div>
-<textarea rows="17" cols="90"></textarea>
+<textarea class = "input_box"></textarea>
+<div class ="clr"></div>
+
 <div id = "property_button">
-<div class = "property_word">COLOR</div>
+	<div id = "size_property" class = "property_button">
+		<div id = "size_property_menu" class = "property_menu" style = "display:none" onclick="$('#size_property_menu').toggle(100)">
+			<div class = "small_input_button whitecolor" style="font-size:x-large">X-large</div>
+			<div class = "small_input_button whitecolor" style="font-size:large">Large</div>
+			<div class = "small_input_button whitecolor" style="font-size:medium">Normal</div>
+			<div class = "small_input_button whitecolor" style="font-size:small">Small</div>
+		</div>
+		<a class = "property_word" href="javascript:void(0)" onclick="$('#size_property_menu').toggle(100)">FONT SIZE</a>
+	</div>
+
+	<div id = "color_property" class = "property_button">
+		<div id = "color_property_menu"class = "property_menu" style = "display:none" onclick="$('#color_property_menu').toggle(100)">
+			<div class = "small_input_button">Black</div>
+			<div class = "small_input_button" style="color:blue">Blue</div>
+			<div class = "small_input_button" style="color:red">Red</div>
+			<div class = "small_input_button" style="color:green">Green</div>
+		</div>
+		<a class = "property_word" href="javascript:void(0)" onclick="$('#color_property_menu').toggle(100)">COLOR</a>
+	</div>
+
+	<div id = "style_property" class = "property_button">
+		<div id = "style_property_menu"class = "property_menu" style = "display:none" onclick="$('#style_property_menu').toggle(100)">
+			<div class = "small_input_button whitecolor">normal</div>
+			<div class = "small_input_button whitecolor" style="font-style:italic">Italic</div>
+			<div class = "small_input_button whitecolor" style="font-weight:bold">Bold</div>
+			<div class = "small_input_button whitecolor" style="font-style:italic;font-weight:bold">Bold+Italic</div>
+		</div>
+		<a class = "property_word" href="javascript:void(0)" onclick="$('#style_property_menu').toggle(100)">STYLE</a>
+	</div>
+
+	<div id = "link_property" class = "property_button">
+		<div class = "property_word">ADD LINK</div>
+	</div>
+
+	<div id = "signature_property" class = "property_button">
+		<div class = "property_word">ADD SIGNATURE</div>
+	</div>
 </div>
