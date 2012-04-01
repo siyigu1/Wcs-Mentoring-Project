@@ -1,0 +1,80 @@
+<script type="text/javascript">
+$(document).ready(function(){
+
+ adjust_layout_<%= message_id %>();
+
+ $("#message_title_<%= message_id %>").click(function(){
+	$("#message_title_<%= message_id %>").hide();
+	$("#message_box_<%= message_id %>").show(100);
+	for(var j = 1; j <= number_of_messages; j++)
+	{
+		if(j != <%= message_id %>)
+		{
+			if($("#message_box_"+j).is(":visible"))
+			{
+				$("#message_title_"+j).show(100);
+				$("#message_box_"+j).hide();
+			}
+		}
+	}
+
+	for(var j = 1; j < <%= message_id %>; j++)
+	{
+
+		$("#message_title_"+j).slideUp(200);
+		if(!$("#click_to_view_more").is(":visible"))
+		{
+			$("#click_to_view_more").show(100);
+		}
+	}
+
+        setTimeout("adjust_layout_<%= message_id %>()", 100);
+ });
+
+ $("#message_box_<%= message_id %>").click(function(){
+	if(!$("#click_to_view_more").is(":visible"))
+	{
+		for(var j = 1; j < <%= message_id %>; j++)
+		{
+
+			$("#message_title_"+j).hide();
+			if(!$("#click_to_view_more").is(":visible"))
+			{
+				$("#click_to_view_more").show(100);
+			}
+		}
+	}
+ });
+
+});
+
+var width;
+var Max;
+
+function adjust_layout_<%= message_id %>(){
+	var tags_to_edit = ["#<%= message_id %>_title_sender", "#<%=message_id %>_title_title"];
+	for(var i = 0; i < tags_to_edit.length; i++)
+	{
+		same_style(tags_to_edit[i]);
+	}
+	width = $("#content_wrapper").width();
+	for(var i = 0; i < tags_to_edit.length; i++)
+	{
+		calculate_width(tags_to_edit[i]);
+	}
+	$("#<%= message_id %>_title_senttime_line").css("width", width);
+
+	//calcualte max margin to align
+	Max = Math.max($(tags_to_edit[0]).height(), $(tags_to_edit[1]).height());
+
+	tags_to_edit = ["#<%= message_id %>_title_sender", "#<%=message_id %>_title_senttime", "#<%=message_id %>_title_title"];
+	for(var i = 0; i < tags_to_edit.length; i++)
+	{
+		change_margin_top(tags_to_edit[i]);
+	}
+
+}
+</script>
+
+<%= render "messages/message", :message_id => message_id %>
+<%= render "messages/message_title", :message_id => message_id %>
