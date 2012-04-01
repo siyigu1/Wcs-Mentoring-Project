@@ -12,8 +12,6 @@ $(document).ready($ ->
 	distance_between = 30
 	left = distance_between
 	move_right tag_to_edit for tag_to_edit in tags_to_edit
-	$("#inbox").css("text-decoration", "underline");
-
 )
 
 move_right = (tag_to_edit) ->

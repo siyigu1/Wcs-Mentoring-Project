@@ -1,46 +1,4 @@
-<script type="text/javascript">
-var width;
-var Max;
-$(document).ready(function(){
-	var tags_to_edit = ["#<%= message_id %>_title_sender", "#<%=message_id %>_title_title"];
-	for(var i = 0; i < tags_to_edit.length; i++)
-	{
-		same_style(tags_to_edit[i]);
-	}
-	width = $("#content_wrapper").width();
-	for(var i = 0; i < tags_to_edit.length; i++)
-	{
-		calculate_width(tags_to_edit[i]);
-	}
-	$("#<%= message_id %>_title_senttime_line").css("width", width);
-
-	//calcualte max margin to align
-	Max = Math.max($(tags_to_edit[0]).height(), $(tags_to_edit[1]).height());
-
-	tags_to_edit = ["#<%= message_id %>_title_sender", "#<%=message_id %>_title_senttime", "#<%=message_id %>_title_title"];
-	for(var i = 0; i < tags_to_edit.length; i++)
-	{
-		change_margin_top(tags_to_edit[i]);
-	}
-})
-function same_style(tag_to_edit){
-	$(tag_to_edit+"_line").css("margin-left",  $(tag_to_edit).css("margin-left"));
-	$(tag_to_edit+"_line").css("margin-right",  $(tag_to_edit).css("margin-right"));
-	$(tag_to_edit+"_line").css("width",  $(tag_to_edit).css("width"));
-	$(tag_to_edit+"_line").css("float",  $(tag_to_edit).css("float"));
-}
-
-function calculate_width(tag_to_edit){
-	width -= 20;
-	width -= $(tag_to_edit).width();
-}
-
-function change_margin_top(tag_to_edit){
-	$(tag_to_edit).css("margin-top", Max - $(tag_to_edit).height());
-}
-
-</script>
-
+<div id = "message_box_<%= message_id %>" class = "message_box" style="display:none">
 <div id = <%= message_id %>_title_barner class = "title_barner">
 <div id = <%= message_id %>_title_barner_word class = "title_barner_word">
 <div  id = <%= message_id %>_title_sender class = "title_sender" style="float:left">
@@ -65,4 +23,5 @@ Hello from mentor
 <p>Dear Mentee</p>
 <p>&nbsp;&nbsp;Hello, Nice to meet you. Please ask questions!</p>
 <p style="text-align:right">Your mentor</p>
+</div>
 </div>
