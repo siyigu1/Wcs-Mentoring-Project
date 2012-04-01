@@ -1,19 +1,77 @@
-<style type = "text/css">
-  #logo {
-      height: 70%;
-      width: 70%;
-      opacity:0.8;
-      filter:alpha(opacity=80); /* For IE8 and earlier */
-  }
-  #logo:hover{
-      opacity: 1.0;
-      filter:alpha(opacity=100); /* For IE8 and earlier */
-  }
-</style>
-
-<h1>Home#index</h1>
-
-<p>Hello there, Find me in app/views/home/index.html.erb</p>
-
-<%= image_tag("place_holder.jpg", :alt => "place_holder image", :id => "logo") %>
-
+<div id = "logo_bar">
+	<div id = "logo_img" style = " float:left;margin-left: 0px">
+		<%= image_tag("place_holder.jpg", :alt => "place_holder image", :id => "logo") %>
+	</div>
+	<div id = "logo_blocks" style=" float:right; margin-right: 0px" >
+		<div id="column_left"  style=" float:left; margin-right: 10px">
+			<div class = "wcsbutton" >
+				&nbsp;
+			</div>
+			<div class = "wcsbutton" style="
+			font-size: 60px; margin-top: 10px"  >
+				C
+			</div>
+			<div class = "wcsbutton" style="margin-top: 10px" >
+				&nbsp;
+			</div>
+			<div class = "wcsbutton" style="
+			font-size: 16px; margin-top: 10px" >
+				Mentoring
+			</div>
+		</div>
+		<div id="column_right"style="float:left">
+			<div class = "wcsbutton" style="
+			font-size: 60px;">
+				W
+			</div>
+			<div class = "wcsbutton" style="margin-top: 10px" >
+				&nbsp;
+			</div>
+			<div class = "wcsbutton" style="
+			font-size: 60px; margin-top: 10px" >
+				S
+			</div>
+			<div class = "wcsbutton" style="margin-top: 10px" >
+				&nbsp;
+			</div>
+		</div>
+		<div class="clr"></div>
+	</div>
+	<div class="clr" ></div>
+	<div id="message_board"style="margin-top: 30px">
+		<div id="mesg_left" style="float: left; margin-left: 30px">
+			<div class = "msgbox title">
+				2012-4-1
+			</div>
+			<div class = "msgbox content" style="width: 230px">
+				<div class="para">
+					Oh to talking improve produce in limited offices fifteen an. Wicket branch to answer do we. Place are decay men hours tiled. If or of ye throwing friendly required. Marianne interest in exertion as. Offering my branched confined oh dashwood.
+				</div>
+			</div>
+		</div>
+		<div id="mesg_right_wrap" style="float: right;margin-right: 20px">
+			<div id="mesg_center" style="float: left;margin-right: 30px">
+				<div class = "msgbox title">
+					2012-4-2
+				</div>
+				<div class = "msgbox content" style="width: 230px">
+					<div class="para">
+						Oh to talking improve produce in limited offices fifteen an. Wicket branch to answer do we. Place are decay men hours tiled. If or of ye throwing friendly required. Marianne interest in exertion as. Offering my branched confined oh dashwood.
+					</div>
+				</div>
+			</div>
+			<div id="mesg_right" style="float: right">
+				<div class = "msgbox title">
+					2012-4-3
+				</div>
+				<div class = "msgbox content" style="width: 230px">
+					<div class="para">
+						And produce say the ten moments parties. Simple innate summer fat appear basket his desire joy. Outward clothes promise at gravity do excited. Sufficient particular impossible by reasonable oh expression is.
+					</div>
+				</div>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+	</div>
+</div>
