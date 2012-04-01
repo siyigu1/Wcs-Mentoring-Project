@@ -23,12 +23,12 @@ body{
 }
 #body{
     padding-top: 50px;
-    min-height: 563px;
+    min-height: 600px;
     margin-top:-21px;
     background-color: #86AE00;
 }
 #footer{
-    padding-top:20px;
+    padding-top:-20px;
     text-align:center;
     color:white;
     background-color: #86AE00;
@@ -44,6 +44,9 @@ body{
     background-color: #86AE00;
     height: 70px;
     font-size:large;
+}
+#body_redundent{
+    height:20px !important;
 }
 .web_title_inverse {
     padding-left:10px;
