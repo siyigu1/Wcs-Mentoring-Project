@@ -23,12 +23,12 @@ body{
 }
 #body{
     padding-top: 50px;
-    min-height: 600px;
-	margin-top:-21px;
-	background-color: #86AE00;
+    min-height: 563px;
+    margin-top:-21px;
+    background-color: #86AE00;
 }
 #footer{
-    margin-top: -20px;
+    padding-top:20px;
     text-align:center;
     color:white;
     background-color: #86AE00;

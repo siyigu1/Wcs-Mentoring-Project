@@ -2,7 +2,7 @@
 var width;
 var Max;
 $(document).ready(function(){
-	var tags_to_edit = ["#<%= message_id %>.title_sender", "#<%=message_id %>.title_title"];
+	var tags_to_edit = ["#<%= message_id %>_title_sender", "#<%=message_id %>_title_title"];
 	for(var i = 0; i < tags_to_edit.length; i++)
 	{
 		same_style(tags_to_edit[i]);
@@ -12,12 +12,12 @@ $(document).ready(function(){
 	{
 		calculate_width(tags_to_edit[i]);
 	}
-	$("#<%= message_id %>.title_senttime_line").css("width", width);
+	$("#<%= message_id %>_title_senttime_line").css("width", width);
 
 	//calcualte max margin to align
 	Max = Math.max($(tags_to_edit[0]).height(), $(tags_to_edit[1]).height());
 
-	tags_to_edit = ["#<%= message_id %>.title_sender", "#<%=message_id %>.title_senttime", "#<%=message_id %>.title_title"];
+	tags_to_edit = ["#<%= message_id %>_title_sender", "#<%=message_id %>_title_senttime", "#<%=message_id %>_title_title"];
 	for(var i = 0; i < tags_to_edit.length; i++)
 	{
 		change_margin_top(tags_to_edit[i]);
@@ -41,27 +41,27 @@ function change_margin_top(tag_to_edit){
 
 </script>
 
-<div id = <%= message_id %> class = "title_barner">
-<div id = <%= message_id %> class = "title_barner_word">
-<div  id = <%= message_id %> class = "title_sender" style="float:left">
+<div id = <%= message_id %>_title_barner class = "title_barner">
+<div id = <%= message_id %>_title_barner_word class = "title_barner_word">
+<div  id = <%= message_id %>_title_sender class = "title_sender" style="float:left">
 mentoring.wcs.uiuc@gmail.com
 </div>
-<div  id = <%= message_id %> class = "title_senttime" style="float:left">
+<div  id = <%= message_id %>_title_senttime class = "title_senttime" style="float:left">
 12:00:00, Apirl 1st, 2012
 </div>
-<div  id = <%= message_id %> class = "title_title" style="float:right">
+<div  id = <%= message_id %>_title_title class = "title_title" style="float:right">
 Hello from mentor
 </div>
 <div class = "clr"></div>
 </div>
-<div  id = <%= message_id %> class = "title_barner_line">
-<div id = <%= message_id %> class = "title_sender_line thick_line_light_color"></div>
-<div id = <%= message_id %> class = "title_senttime_line thin_line_light_color"></div>
-<div id = <%= message_id %> class = "title_title_line thick_line_light_color"></div>
+<div  id = <%= message_id %>_title_barner_line class = "title_barner_line">
+<div id = <%= message_id %>_title_sender_line class = "title_sender_line thick_line_light_color"></div>
+<div id = <%= message_id %>_title_senttime_line class = "title_senttime_line thin_line_light_color"></div>
+<div id = <%= message_id %>_title_title_line class = "title_title_line thick_line_light_color"></div>
 <div class = "clr"></div>
 </div>
 </div>
-<div  id = <%= message_id %> class = "message_content">
+<div  id = <%= message_id %>_message_content class = "message_content">
 <p>Dear Mentee</p>
 <p>&nbsp;&nbsp;Hello, Nice to meet you. Please ask questions!</p>
 <p style="text-align:right">Your mentor</p>

@@ -8,6 +8,13 @@
     height: 45px;
 }
 
+#click_to_view_more{
+    color:white;
+    background-color: #9EC618;;
+    width: 100%;
+    margin-top:10px;
+    text-align:center;
+}
 
 //css for input box
 //the total input box
@@ -71,7 +78,7 @@ a.property_word:active {color:#9EC618;}
 
 
 //css for messagebox
-#message_box{
+.message_box{
     margin-top: 10px;
     background-color: white;
     width:100%;
@@ -106,4 +113,22 @@ a.property_word:active {color:#9EC618;}
 
 .message_content{
     padding:10px;
+}
+
+//css for message title
+.message_title{
+    width:100%;
+    color:white;
+    background-color: #9EC618;;
+    margin-top:10px;
+}
+
+.message_title_sender{
+    float:left;
+    margin-left:10px;
+}
+
+.message_title_title{
+    float:right;
+    margin-right:10px;
 }
