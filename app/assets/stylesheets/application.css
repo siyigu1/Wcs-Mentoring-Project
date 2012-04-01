@@ -45,16 +45,28 @@ body{
     height: 70px;
     font-size:large;
 }
-a.menu_button{
- text-decoration:none
-}
 .web_title_inverse {
-	padding-left:10px;
-	padding-right:10px;
-	color: white;
-	background-color: #86AE00;
+    padding-left:10px;
+    padding-right:10px;
+    color: white;
+    background-color: #86AE00;
 }
 .clr
 {
-	clear: both;
+    clear: both;
+}
+.thick_line_light_color
+{
+    height: 1px;
+    border-bottom-width:2px;
+    border-bottom-style:solid;
+    border-color: #9EC618;
+}
+
+.thin_line_light_color
+{
+    height: 1px;
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-color: #9EC618;
 }

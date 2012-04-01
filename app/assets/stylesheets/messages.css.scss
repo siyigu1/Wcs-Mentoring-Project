@@ -1,16 +1,20 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 #menu_bar{
     color:white;
     background-color: #86AE00;
     height: 45px;
 }
+
+
+//css for input box
 //the total input box
 #input_box{
     background-color: white;
-    width:800px;
-    height:300px;
+    width:100%;
+    height:216px;
 }
 #property_button{
     position:relative;
@@ -21,7 +25,7 @@
     color:white;
     background-color:  #9EC618;
     width: 150px;
-    height: 90px
+    height: 70px
 }
 //the word on the button on the right
 .input_word{
@@ -40,11 +44,11 @@
     color:white;
 }
 //the textarea
-.input_box{
+.input_space{
     padding-top:20px;
     padding-left:20px;
-    width:600px;
-    height:245px;
+    width:75%;
+    height:170px;
 }
 //the property button group, includes the popup menu of property change
 .property_button{
@@ -64,3 +68,42 @@ a.property_word:link {color:#9EC618;}      /* unvisited link */
 a.property_word:visited {color:#9EC618;}  /* visited link */
 a.property_word:hover {color:#9EC618;}  /* mouse over link */
 a.property_word:active {color:#9EC618;} 
+
+
+//css for messagebox
+#message_box{
+    margin-top: 10px;
+    background-color: white;
+    width:100%;
+    min-height:100px;
+}
+
+.title_barner{
+    padding-top:5px;
+    font-size:small;
+}
+
+.title_sender{
+    margin-left:10px;
+    margin-right:10px;
+    color:silver;
+}
+
+.title_senttime{
+    color:silver;
+}
+
+.title_title{
+    font-weight:1000;
+    font-style:italic;
+    margin-right:10px;
+    margin-left:10px
+}
+
+.title_senttime_line{
+    float:left;
+}
+
+.message_content{
+    padding:10px;
+}
