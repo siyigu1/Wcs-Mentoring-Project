@@ -1,14 +1,20 @@
-<div class="web_title" style="float:left">WCS</div>
-<div class="web_title_inverse" style="float:left;margin-left:10px">MENTORING</div>
+<div class="web_title" style="float:left">
+	WCS
+</div>
+<div class="web_title_inverse" style="float:left;margin-left:10px">
+	<%= link_to 'MENTORING', root_path
+%>
+</div>
 <div style="float:right">
-    <% if current_user %>
-        <%= link_to 'logout', logout_path %>
-    <% else %>
-        <%= link_to 'login', login_path %> |
+	<% if current_user %>
+	<%= link_to 'logout', logout_path %>
+	<% else %>
+	<%= link_to 'login', login_path %> |
 	<%= link_to 'register', register_path %>
-     <% end %>
+	<% end %>
 </div>
 <% if controller.controller_name != "home" %>
-	<div class="web_title_inverse" style="float:right;margin-right:100px"><%= controller.controller_name.upcase =%></div>
-<% end %>
-<div class="clr"></div>
+<div class="web_title_inverse" style="float:right;margin-right:100px">
+	<%= controller.controller_name.upcase =%>
+</div>
+<% end %> <div class="clr"></div>

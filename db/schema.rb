@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120328015013) do
+ActiveRecord::Schema.define(:version => 20120412155641) do
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.string   "content"
+    t.string   "introduction"
+    t.integer  "author_id"
+    t.string   "location"
+    t.datetime "time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["author_id"], :name => "index_events_on_author_id"
 
   create_table "messages", :force => true do |t|
     t.string   "title"

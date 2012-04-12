@@ -1,26 +1,25 @@
 WcsMentoringProject::Application.routes.draw do
   get "messages/show"
 
-#  get "users/create"
+  #  get "users/create"
 
-#  get "users/edit"
+  #  get "users/edit"
 
-#  get "users/update"
+  #  get "users/update"
 
-#  get "user_session/new"
+  #  get "user_session/new"
 
   get "home/index"
 
-
   resource :user_sessions
   resources :users
+  resources :event
   resource :messages do
- 	 get 'inbox'
-	 get 'sent'
-	 get 'draft'
-	 get 'settings'
+    get 'inbox'
+    get 'sent'
+    get 'draft'
+    get 'settings'
   end
-
 
   match 'register' => 'users#new'
   match 'login' => 'user_sessions#new'
@@ -30,7 +29,7 @@ WcsMentoringProject::Application.routes.draw do
   match 'mainsite' => 'home#mainsite'
   match 'messagebox' => 'messages#show'
   match 'intro' => 'home#intro'
-  match 'eventmain'=>'event#main'
+  match 'eventmain'=>'event#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -81,11 +80,11 @@ WcsMentoringProject::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index'
+  root :to => 'home#index'
 
-  # See how all your routes lay out with "rake routes"
+# See how all your routes lay out with "rake routes"
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+# This is a legacy wild controller route that's not recommended for RESTful applications.
+# Note: This route will make all actions in every controller accessible via GET requests.
+# match ':controller(/:action(/:id(.:format)))'
 end

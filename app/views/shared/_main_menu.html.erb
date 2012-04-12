@@ -1,5 +1,11 @@
 <div style="padding-top:50px">
-<div style="margin-right:60px;float:right"><%= link_to 'Message Box', {:controller => "messages", :action => "inbox"}, :class => 'menu_button' %></div>
-<div style="margin-right:60px;float:right"><%= link_to 'Event Intro', eventmain_path, :class => 'menu_button' %></div>
-<div style="margin-right:60px;float:right"><%= link_to 'What is Mentoring@WCS?', intro_path, :class => 'menu_button' %></div>
+	<div style="margin-right:60px;float:right">
+		<%= link_to 'Message Box', {:controller => "messages", :action => "inbox"}, :class => 'menu_button' %>
+	</div>
+	<div style="margin-right:60px;float:right">
+		<%= link_to 'Event Intro', eventmain_path, :class => 'menu_button' %>
+	</div>
+	<div style="margin-right:60px;float:right">
+		<%= link_to 'What is Mentoring@WCS?', about_path, :class => 'menu_button' %>
+	</div>
 </div>
