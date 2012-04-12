@@ -37,7 +37,7 @@ $(document).ready(function(){
 		for(var j = 1; j < <%= message_id %>; j++)
 		{
 
-			$("#message_title_"+j).hide();
+			$("#message_title_"+j).slideUp(200);
 			if(!$("#click_to_view_more").is(":visible"))
 			{
 				$("#click_to_view_more").show(100);
