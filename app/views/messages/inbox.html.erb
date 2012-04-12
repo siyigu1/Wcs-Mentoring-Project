@@ -1,56 +1,76 @@
 <script type="text/javascript">
-var number_of_messages = 9;
+	var number_of_messages = 9;
 
-function same_style(tag_to_edit){
-	$(tag_to_edit+"_line").css("margin-left",  $(tag_to_edit).css("margin-left"));
-	$(tag_to_edit+"_line").css("margin-right",  $(tag_to_edit).css("margin-right"));
-	$(tag_to_edit+"_line").css("width",  $(tag_to_edit).css("width"));
-	$(tag_to_edit+"_line").css("float",  $(tag_to_edit).css("float"));
-}
+	function same_style(tag_to_edit) {
+		$(tag_to_edit + "_line").css("margin-left", $(tag_to_edit).css("margin-left"));
+		$(tag_to_edit + "_line").css("margin-right", $(tag_to_edit).css("margin-right"));
+		$(tag_to_edit + "_line").css("width", $(tag_to_edit).css("width"));
+		$(tag_to_edit + "_line").css("float", $(tag_to_edit).css("float"));
+	}
 
-function calculate_width(tag_to_edit){
-	width -= 20;
-	width -= $(tag_to_edit).width();
-}
+	function calculate_width(tag_to_edit) {
+		width -= 20;
+		width -= $(tag_to_edit).width();
+	}
 
-function change_margin_top(tag_to_edit){
-	$(tag_to_edit).css("margin-top", Max - $(tag_to_edit).height());
+	function change_margin_top(tag_to_edit) {
+		$(tag_to_edit).css("margin-top", Max - $(tag_to_edit).height());
 
-$("#inbox").css("text-decoration", "underline");
-}
+		$("#inbox").css("text-decoration", "underline");
+	}
 
 
-$(document).ready(function(){
-	$("#message_box_1").show();
-	$("#message_title_1").hide();
+	$(document).ready(function() {
+		$("#message_box_1").show();
+		$("#message_title_1").hide();
 
-	$("#click_to_view_more").click(function(){
-		for(var k = 1; k < number_of_messages; k++)
-		{
-			$("#click_to_view_more").hide();
-			$("#message_title_"+k).show(100);
-			if($("#message_box_"+k).is(":visible"))
-			{
-				break;
+		$("#click_to_view_more").click(function() {
+			for(var k = 1; k < number_of_messages; k++) {
+				$("#click_to_view_more").hide();
+				$("#message_title_" + k).show(100);
+				if($("#message_box_" + k).is(":visible")) {
+					break;
+				}
+
 			}
-
-		}
-	})
-});
+		})
+	});
 
 </script>
-
-<div id = "menu_bar"><%= render "messages/menu_bar" %></div>
-<div id = "input_box"><%= render "messages/input" %></div>
+<div id = "menu_bar">
+	<%= render "messages/menu_bar" %>
+</div>
+<div id = "input_box">
+	<%= render "messages/input" %>
+</div>
 <div class = "clr"></div>
-<div id = "click_to_view_more" class="highlight" style="display:none">...Click to View Previous Messages...</div>
-<div id = "message_1"><%= render "message_group", :message_id => 1 %></div>
-<div id = "message_2"><%= render "message_group", :message_id => 2 %></div>
-<div id = "message_3"><%= render "message_group", :message_id => 3 %></div>
-<div id = "message_4"><%= render "message_group", :message_id => 4 %></div>
-<div id = "message_5"><%= render "message_group", :message_id => 5 %></div>
-<div id = "message_6"><%= render "message_group", :message_id => 6 %></div>
-<div id = "message_7"><%= render "message_group", :message_id => 7 %></div>
-<div id = "message_8"><%= render "message_group", :message_id => 8 %></div>
-<div id = "message_9"><%= render "message_group", :message_id => 9 %></div>
-
+<div id = "click_to_view_more" class="highlight" style="display:none">
+	...Click to View Previous Messages...
+</div>
+<div id = "message_1">
+	<%= render "message_group", :message_id => 1 %>
+</div>
+<div id = "message_2">
+	<%= render "message_group", :message_id => 2 %>
+</div>
+<div id = "message_3">
+	<%= render "message_group", :message_id => 3 %>
+</div>
+<div id = "message_4">
+	<%= render "message_group", :message_id => 4 %>
+</div>
+<div id = "message_5">
+	<%= render "message_group", :message_id => 5 %>
+</div>
+<div id = "message_6">
+	<%= render "message_group", :message_id => 6 %>
+</div>
+<div id = "message_7">
+	<%= render "message_group", :message_id => 7 %>
+</div>
+<div id = "message_8">
+	<%= render "message_group", :message_id => 8 %>
+</div>
+<div id = "message_9">
+	<%= render "message_group", :message_id => 9 %>
+</div>
